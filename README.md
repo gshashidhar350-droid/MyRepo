@@ -36,6 +36,12 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Deploying to AWS Elastic Beanstalk
+
+Use the Node.js 22 platform. Build the application with `npm run build` before deployment, then start it with `npm start`. The server uses the `PORT` environment variable provided by Elastic Beanstalk.
+
+For local development, run `npm run start:dev`.
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
