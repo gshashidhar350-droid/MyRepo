@@ -42,6 +42,26 @@ Use the Node.js 22 platform. Build the application with `npm run build` before d
 
 For local development, run `npm run start:dev`.
 
+## Running with Docker
+
+Build the production image from the repository root:
+
+```bash
+docker build -t my-first-app .
+```
+
+Run the container and open `http://localhost:4000`:
+
+```bash
+docker run --rm -p 4000:4000 my-first-app
+```
+
+The container listens on port `4000` by default. To use a different port, set the `PORT` environment variable and map that port:
+
+```bash
+docker run --rm -e PORT=8080 -p 8080:8080 my-first-app
+```
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
