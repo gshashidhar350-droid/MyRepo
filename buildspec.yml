@@ -13,4 +13,4 @@ phases:
       - docker push $ECR_REPOSITORY_URI:latest
 artifacts:
   files:
-    - '**/*'
+    - 'imagedefinitions.json'
