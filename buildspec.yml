@@ -10,6 +10,7 @@ phases:
       - docker build -t $ECR_REPOSITORY_URI:latest .
   post_build:
     commands:
+      - printf '[{"name":"container_name","imageUri":"image_URI"}]' > imagedefinitions.json
       - docker push $ECR_REPOSITORY_URI:latest
 artifacts:
   files:
