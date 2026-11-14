@@ -10,7 +10,7 @@ phases:
       - docker build -t $ECR_REPOSITORY_URI:latest .
   post_build:
     commands:
-      - docker push $ECR_REPOSITORY_URI:latest3
+      - docker push $ECR_REPOSITORY_URI:latest
 artifacts:
   files:
     - '**/*'
